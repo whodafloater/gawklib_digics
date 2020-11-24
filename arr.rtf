@@ -1,15 +1,15 @@
-{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset204 Courier New;}{\f1\fnil\fcharset0 Courier New;}}
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Courier New;}{\f1\fnil\fcharset204 Courier New;}}
 {\*\generator Riched20 10.0.17763}\viewkind4\uc1 
-\pard\sl240\slmult1\qj\f0\fs22\lang1049\par
+\pard\sl240\slmult1\qj\f0\fs22\lang1033 l;;\f1\lang1049\par
 \par
-\f1\lang1033\par
+\f0\lang1033\par
 \b\i\fs48 arr\b0\i0  \i\fs32 v2.5\par
 \i0\fs22\tab\tab\tab\tab\tab\tab    \tab\tab\tab      \i by digi 2020\i0\par
 \tab\tab\tab\par
 \b __________________________________________________________________\par
-\b0\f0\lang1049\par
-\b\f1\fs26\lang1033 INTRODUCTION\b0\f0\fs22\lang1049\par
-\f1\lang1033\par
+\b0\f1\lang1049\par
+\b\f0\fs26\lang1033 INTRODUCTION\b0\f1\fs22\lang1049\par
+\f0\lang1033\par
 \tab the \b arr\b0  module is the part of the \b env\b0 -package.\par
 \par
 \tab please see also \b env\b0 -package documentation (\i env.rtf\i0 )\par
@@ -29,21 +29,21 @@
 \tab\tab ? global arrays:\par
 \par
 \tab\tab ? globvars:\par
-\b __________________________________________________________________\b0\f0\lang1049\par
+\b __________________________________________________________________\b0\f1\lang1049\par
 \par
-\b\f1\fs26\lang1033 REQUIREMENTs\b0\f0\fs22\lang1049\par
+\b\f0\fs26\lang1033 REQUIREMENTs\b0\f1\fs22\lang1049\par
 \par
-\f1\lang1033\tab - gawk version 4.1.4+ ?\par
+\f0\lang1033\tab - gawk version 4.1.4+ ?\par
 \par
 \tab - using in \b _env\b0\par
 \b\par
-__________________________________________________________________\b0\f0\lang1049\par
+__________________________________________________________________\b0\f1\lang1049\par
 \par
-\b\f1\fs26\lang1033 RESOURCEs\b0\f0\fs22\lang1049\par
+\b\f0\fs26\lang1033 RESOURCEs\b0\f1\fs22\lang1049\par
 \par
-\f1\lang1033\tab LOW LEVEL RESOURCES::\f0\lang1049\par
+\f0\lang1033\tab LOW LEVEL RESOURCES::\f1\lang1049\par
 \par
-\f1\lang1033\tab\b reta\b0 ()\tab\tab - return elements of the array as the single string\par
+\f0\lang1033\tab\b reta\b0 ()\tab\tab - return elements of the array as the single string\par
 \tab\b retas\b0 ()\tab\tab - return elements of the array with separator\par
 \tab\b retab\b0 ()\tab\tab - return element-pairs of two arrays\par
 \par
@@ -71,14 +71,14 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab\b dumpa\b0 ()\tab\tab - dumping content of the given array\par
 \par
-\tab\b _sortedin\b0 ()\tab - control \b PROCINFO\b0 [ "\i sorted_in\i0 " ]\f0\lang1049\par
+\tab\b _sortedin\b0 ()\tab - control \b PROCINFO\b0 [ "\i sorted_in\i0 " ]\f1\lang1049\par
 \par
-\f1\lang1033\tab the detailed reference of the module resources is below.\f0\lang1049\par
-\b\f1\lang1033 __________________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 reta\b0 ( \i A\i0 , \i s\i0 , \i l\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab function return sequential numeric indexed elements of array `\i A\i0  as the \tab single string. parameter `\i s\i0  is determinating start numeric index while \tab parameter `\i l\i0  determinates the number of elements returned:\par
+\f0\lang1033\tab the detailed reference of the module resources is below.\f1\lang1049\par
+\b\f0\lang1033 __________________________________________________________________\b0\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 reta\b0 ( \i A\i0 , \i s\i0 , \i l\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab function return sequential numeric indexed elements of array `\i A\i0  as the \tab single string. parameter `\i s\i0  is determinating start numeric index while \tab parameter `\i l\i0  determinates the number of elements returned:\par
 \par
 \tab\tab\b reta\b0 ( \i A\i0 , \i 2\i0 , \i 3\i0  )\par
 \par
@@ -111,8 +111,8 @@ __________________________________________________________________\b0\f0\lang104
 \b ____________________________________________________________\b0\par
 \par
 \b\fs26 retas\b0 ( \i A\i0 , \i sep\i0 , \i s\i0 , \i l\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab return numeric indexed elements of the array `\i A\i0  separated by the string \tab in `\i sep\i0 .\par
+\f1\lang1049\par
+\f0\lang1033\tab return numeric indexed elements of the array `\i A\i0  separated by the string \tab in `\i sep\i0 .\par
 \par
 \tab parameter `\i s\i0  may be omitted ( == "" ) in this case start index will be \tab determinated automatically and will equal 0 or 1 - depending from if \tab index \i 0\i0  is exist in array `\i A\i0 :\par
 \par
@@ -145,8 +145,8 @@ __________________________________________________________________\b0\f0\lang104
 \b ____________________________________________________________\b0\par
 \par
 \b\fs26 retab\b0 ( \i A\i0 , \i B\i0 , \i sa\i0 , \i l\i0 , \i sb\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab return the number of pairs of the incremental numeric indexed elements of \tab the array `\i A\i0  and `\i B\i0 .\par
+\f1\lang1049\par
+\f0\lang1033\tab return the number of pairs of the incremental numeric indexed elements of \tab the array `\i A\i0  and `\i B\i0 .\par
 \par
 \tab function specially designed as the opposite of split/patsplit functions \tab performing with the two arrays (4th parameter of split/patsplit).\par
 \par
@@ -190,8 +190,8 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab function operates using \b AIR\b0  ( Array Index Reducing ) joining method. it's \tab provide excellent performance with at the same time more higher memory \tab requirements than the other methods (see \b AIR\b0 -method).\par
 \b __________________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _mova\b0 ( \i D\i0 , \i S\i0  )\fs22\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _mova\b0 ( \i D\i0 , \i S\i0  )\fs22\par
 \par
 \tab copy all elements in array `\i S\i0  to array `\i D\i0 .\par
 \par
@@ -235,8 +235,8 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab if `\i s\i0  is not exist in array `\i S\i0  then element `\i d\i0  in array `\i D\i0  will be \tab deleted.\par
 \b __________________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _adda\b0 ( \i D\i0 , \i S\i0  )\fs22\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _adda\b0 ( \i D\i0 , \i S\i0  )\fs22\par
 \par
 \tab if `\i D\i0  and `\i S\i0  are the same array then return immediately.\par
 \par
@@ -275,17 +275,17 @@ __________________________________________________________________\b0\f0\lang104
 \b ____________________________________________________________\b0\par
 \par
 \b\fs26 _addiaia\b0 ( \i d\i0 , \i D\i0 , \i s\i0 , \i S\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab copy `\i S\i0 [ `\i s\i0  ] to `\i D\i0 [ `\i d\i0  ].\par
+\f1\lang1049\par
+\f0\lang1033\tab copy `\i S\i0 [ `\i s\i0  ] to `\i D\i0 [ `\i d\i0  ].\par
 \par
 \tab if type of `\i S\i0 [ `\i s\i0  ] is an array and element `\i d\i0  in array `\i D\i0  is already \tab defined as subarray then it's will be extended by the elements from \tab `\i S\i0 [ `\i s\i0  ] - it's will \b NOT\b0  been cleared before start copying elements from \tab array `\i S\i0 [ `\i s\i0  ].\par
 \par
 \tab if `\i s\i0  is not exist in array `\i S\i0  then element `\i d\i0  in array `\i D\i0  will be \tab deleted.\par
 \b __________________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _defa\b0 ( \i i\i0 , \i A\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab define clear subarray at `\i A\i0 [ `\i i\i0  ].\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _defa\b0 ( \i i\i0 , \i A\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab define clear subarray at `\i A\i0 [ `\i i\i0  ].\par
 \par
 \tab if index `\i i\i0  exist in array `\i A\i0  then it's will be deleted and then \tab redefined as an subarray.\par
 \par
@@ -297,10 +297,10 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab\tab\tab split( ..., \i A\i0 [ \b _defa\b0 ( "\i abc\i0 ", \i A\i0  ) ], ...\par
 \b\fs22 ____________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _leta\b0 ( \i i\i0 , \i A\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab define subarray at `\i A\i0 [ `\i i\i0  ] if it's not already defined.\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _leta\b0 ( \i i\i0 , \i A\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab define subarray at `\i A\i0 [ `\i i\i0  ] if it's not already defined.\par
 \par
 \tab if index `\i i\i0  exist in array `\i A\i0  and it's not an subarray then `\i A\i0 [ `\i i\i0  ] will \tab be deleted and redefined as an array.\par
 \par
@@ -314,10 +314,10 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab\tab\tab split( ..., \i A\i0 [ \b _leta\b0 ( "\i abc\i0 ", \i A\i0  ) ], ...\par
 \b\fs22 __________________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _nama\b0 ( \i A\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab function try to detect array's `\i A\i0  syntax name in case if `\i A\i0  is the chield \tab of the \b SYMTAB\b0  array.\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _nama\b0 ( \i A\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab function try to detect array's `\i A\i0  syntax name in case if `\i A\i0  is the chield \tab of the \b SYMTAB\b0  array.\par
 \par
 \tab if \b _nama\b0 () is unable to detect the name of the array `A (in case if it's \tab a local array) then \b _nama\b0 () returns \b null\b0 .\par
 \par
@@ -333,16 +333,16 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab\tab\tab ArrayName\par
 \b\fs22 ____________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _sama\b0 ( \i A\i0 , \i B\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab function detects that if array `\i A\i0  and array `\i B\i0  are the same array or not.\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _sama\b0 ( \i A\i0 , \i B\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab function detects that if array `\i A\i0  and array `\i B\i0  are the same array or not.\par
 \tab it's and return true in case if arrays `\i A\i0  and `\i B\i0  are the same array.\par
 \b ____________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 dumpa\b0 ( \i A\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab function return text form of dumping array `\i A\i0 .\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 dumpa\b0 ( \i A\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab function return text form of dumping array `\i A\i0 .\par
 \par
 \tab the following illustrates dump output form:\par
 \par
@@ -387,20 +387,20 @@ __________________________________________________________________\b0\f0\lang104
 \par
 \tab list-arrays have special output form. first dumping only items from list \tab in forward direction. then all other array's indexes dumped. the subarray \tab array[ LIST ] is completely hided in array dump.\par
 \b ____________________________________________________________\b0\par
-\f0\lang1049\par
-\b\f1\fs26\lang1033 _sortedin\b0 ( \i v\i0  )\fs22\par
-\f0\lang1049\par
-\f1\lang1033\tab function return current value of \b PROCINFO\b0 [ "\i sorted_in\i0 " ].\par
+\f1\lang1049\par
+\b\f0\fs26\lang1033 _sortedin\b0 ( \i v\i0  )\fs22\par
+\f1\lang1049\par
+\f0\lang1033\tab function return current value of \b PROCINFO\b0 [ "\i sorted_in\i0 " ].\par
 \par
 \tab function setup new value `\i v\i0  for \b PROCINFO\b0 [ "\i sorted_in\i0 " ].\par
 \b __________________________________________________________________\b0\par
 \par
-\b\fs26 AIR\b0 -method\f0\fs22\lang1049\par
+\b\fs26 AIR\b0 -method\f1\fs22\lang1049\par
 \par
 \par
-\b\f1\lang1033 AIR\b0  ( Array Index Reducing ) joining method. it's provide excellent performance with at the same time more higher memory requirements than the other methods.\par
+\b\f0\lang1033 AIR\b0  ( Array Index Reducing ) joining method. it's provide excellent performance with at the same time more higher memory requirements than the other methods.\par
 \par
-the air-method have one clue value\f0\lang1049  embedded in the code - \f1\lang1033 the reduce factor \par
+the air-method have one clue value\f1\lang1049  embedded in the code - \f0\lang1033 the reduce factor \par
 \par
 for explanation of the air-method - let's suppose that reduce factor is equal to 2 and we just take a look on the array's elements joyning together:\par
 \par
@@ -438,8 +438,8 @@ lets suppose \par
 \par
 \b __________________________________________________________________\b0\par
 \par
-\b\fs26 strarr\b0 -format description\f0\fs22\lang1049\par
-\f1\lang1033\par
+\b\fs26 strarr\b0 -format description\f1\fs22\lang1049\par
+\f0\lang1033\par
 \tab strarr-format is designed for user-to-string-to-array concersions.\par
 \par
 \tab strrr-format targeting to be an human-friendly form of source.\par
@@ -453,7 +453,7 @@ altescape support:\par
 \par
 note that all spacers at the begining and ending strarr-string will be disappeared\par
 \par
-strarr-format\f0\lang1049  \f1\lang1033 is an typical form of listing containing item record(s) separated by the character ',' (\\x2C). note that all spacers around character ',' will be disappeared except in case if it's alt-escaped.\par
+strarr-format\f1\lang1049  \f0\lang1033 is an typical form of listing containing item record(s) separated by the character ',' (\\x2C). note that all spacers around character ',' will be disappeared except in case if it's alt-escaped.\par
 \par
 each item record may have two forms:\par
 \par
@@ -465,22 +465,22 @@ each item record may have two forms:\par
 \par
 \tab\tab implements item(s) `name and it's `value\par
 \par
-\f0\lang1049 the presence of the \f1\lang1033 not-altescaped character \f0\lang1049 "\f1\lang1033 =\f0\lang1049 "\f1\lang1033  inside the item record will determinates what form of item record we have\par
+\f1\lang1049 the presence of the \f0\lang1033 not-altescaped character \f1\lang1049 "\f0\lang1033 =\f1\lang1049 "\f0\lang1033  inside the item record will determinates what form of item record we have\par
 \par
 the implementation below will be point to view on the second form of item record.\par
 \par
 \par
-the `name may be any string containing any characters except characters: [,=] that are should be altescaped in case if user wants to make it as the part of the `name. note that all spacers around the `name will be disappeared. this is except altescaped spacers.\f0\lang1049\par
+the `name may be any string containing any characters except characters: [,=] that are should be altescaped in case if user wants to make it as the part of the `name. note that all spacers around the `name will be disappeared. this is except altescaped spacers.\f1\lang1049\par
 \par
-\f1\lang1033 the `name may be present multiple times\par
+\f0\lang1033 the `name may be present multiple times\par
 \par
 the `value is like the `name but with the some additions. it's may be an any string containing any characters except: [,=\\[\\]]. it is also loose it's spacers arounding it and it is also support alternative escape characater.\par
 \par
 \par
 \par
  \par
-\f0\lang1049\par
-\f1\lang1033\par
+\f1\lang1049\par
+\f0\lang1033\par
 \par
 \par
 \par
@@ -541,9 +541,9 @@ A[ a ] = c\tab\tab\tab # the content of globvar `DEFAULT is the value\par
 \tab\tab added feature of special output for list arrays ( containing index \tab\tab LIST ). the array outputs list items first and after that all other \tab\tab indexes. subarray LIST dump isn't present in output.\par
 \par
 \par
-\b __________________________________________________________________\b0\f0\lang1049\par
+\b __________________________________________________________________\b0\f1\lang1049\par
 \par
-\b\f1\fs26\lang1033 THERMS\b0\f0\fs22\lang1049\par
+\b\f0\fs26\lang1033 THERMS\b0\f1\fs22\lang1049\par
 \par
 \par
 \par
