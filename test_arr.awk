@@ -105,7 +105,7 @@ function md_results(stats, sortfn, sortparam        , s, n, lengths, key, sorter
 }
 
 function md_record(r, n, lengths, size         , s, refsize){
-   s = sprintf("%8s | %20s", n, lengths);
+   s = sprintf("| %8s | %20s", n, lengths);
 
    # grab the size from any record and make sure they are all they same.
    for(fn in r) {refsize = r[fn]["size"]; break;}
@@ -126,9 +126,9 @@ function md_record(r, n, lengths, size         , s, refsize){
 }
 
 function md_header(stats       , s, b, n, lengths, fn){
-   s = sprintf("%8s | %20s", "indicies", "element lengths");
+   s = sprintf("| %8s | %20s", "indicies", "element lengths");
    s = s sprintf(" | %8s ", "str size");
-   b = "---------|----------------------|----------";
+   b = "|----------|----------------------|----------";
 
    for(n in stats) {
       for(lengths in stats[n]) {
