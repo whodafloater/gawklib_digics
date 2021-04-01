@@ -6,6 +6,7 @@ sample results from test_arr.sh
 
 
 
+```
 thrash slow_merge
 thrash slow_merge n=10000 lengths=1 1 1 1 time=0.00246975
 thrash _reta
@@ -39,4 +40,4 @@ stats[ 200000 ][ 1 64 128 256 ][ slow_merge ][ elapsed ] = 11
 stats[ 200000 ][ 1 64 128 256 ][ slow_merge ][ size ] = 22449999
 stats[ 200000 ][ 1 64 128 256 ][ slow_merge ][ time ] = 1.83333
 stats[ 200000 ][ 1 64 128 256 ][ slow_merge ][ iters ] = 6
-
+```
