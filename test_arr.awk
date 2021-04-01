@@ -121,7 +121,7 @@ function md_record(r, n, lengths, size         , s, refsize){
        s = s sprintf(" | %1s %9.4f ms ", err, r[fn]["time"]*1e3);
       }
 
-   s = s "\n";
+   s = s " |\n";
    return s;
 }
 
@@ -142,8 +142,8 @@ function md_header(stats       , s, b, n, lengths, fn){
       break;
      }
 
-   s = s "\n";
-   s = s b "\n";
+   s = s " |\n";
+   s = s b "-|\n";
    return s;
 }
 
