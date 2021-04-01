@@ -1,6 +1,8 @@
 # test_arr.awk
 # 
 # gawk -f _arr.mod -f walk_array.awk -f test_arr.awk
+#
+# _arr.mod library from https://github.com/digics
 
 BEGIN{
 
