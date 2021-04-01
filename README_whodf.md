@@ -1,10 +1,25 @@
+3/31/2020
+Tom Gray
 
-fork of ttps://github.com/digics/gawklib
+Fork of https://github.com/digics/gawklib
+
+`_arr.mod` is a collection of functions concatenating arrays of strings.
 
 
-sample results from test_arr.sh
+200k strings case, `_reta()` does in 42 mS while
+normal concatatenation in a loop takes 1.8 Sec:
 
+```
+function slow_merge(a, i1, i2   ,s, i){
+   s = "";
+   for(i = i1; i<=i2; i++){
+      s = s a[i];
+     }
+   return s;
+}
+```
 
+Sample results from `test_arr.sh` are below:
 
 ```
 thrash slow_merge

@@ -30,6 +30,7 @@ BEGIN{
 
    # timing tests
    stats[""][""];
+   test_arr(stats, 10,  "1 2 4 8");
    test_arr(stats, 10000,  "1 1 1 1");
    #test_arr(stats, 10000,  "1 64 128 256");
    #test_arr(stats, 50000,  "1 256 512 1024");
@@ -39,6 +40,7 @@ BEGIN{
 }
 
 function test_arr(stats, n, lengths          , m, len, i, j, s, a, t0, expect, fns){
+   repeating_strings = 0;
 
    # build an array of strings per digi_cs
    if(n=="") n = 200000;
@@ -46,15 +48,22 @@ function test_arr(stats, n, lengths          , m, len, i, j, s, a, t0, expect, f
 
    m = split(lengths, len);
 
-   for(i = 1; i <= m; i++) {
-      for(j = 1; j <= len[i]; j++) {
-         s[i] = s[i] i;
+   # Same strings over and over or repeating strings?
+   # results are the same. gawk has no internal optimizations for strings.
+   if(!repeating_strings){
+      for(i = 1; i <= m; i++) {
+         for(j = 1; j <= len[i]; j++) {
+            s[i] = s[i] i;
+         }
+         #print i, s[i];
       }
-      #print i, s[i];
-   }
-
-   for(i = 0; i<n; i++){
-      a[i] = s[(i % m) + 1];
+      for(i = 0; i<n; i++){
+         a[i] = s[(i % m) + 1];
+      }
+   } else {
+      for(i = 0; i<n; i++){
+         a[i] = rand_str(len[(i % m) + 1]);
+      }
    }
 
    # make sure all results match this one:
@@ -124,4 +133,12 @@ function thrasher(stats, fn, a1, a2, a3, expect, timewindow, miniters    , iters
    stats["size"] = length(result);
 
    return elapsed / iters;
+}
+
+function rand_str(n   , s){
+   while(n>0) {
+      s = s sprintf("%c", int(rand()*92)+32);
+      n--;
+   }
+   return s;
 }
