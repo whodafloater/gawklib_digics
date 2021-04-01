@@ -187,7 +187,7 @@ function test_arr(stats, n, lengths          , m, len, i, j, s, a, t0, expect, f
 
    fns[n][lengths]["_reta"];
    fns[n][lengths]["slow_merge"];
-   #fns["rev_merge"]; # painfully slow
+   #fns[n][lengths]["rev_merge"]; # painfully slow
    fns[n][lengths]["_reta_classic"];
 
    for(f in fns[n][lengths]){
@@ -200,18 +200,19 @@ function test_arr(stats, n, lengths          , m, len, i, j, s, a, t0, expect, f
      }
 }
 
-function slow_merge(a, i1, i2   ,s, i){
+function slow_merge(a, i1, len   ,s, i, i2){
    s = "";
-   for(i = i1; i<=i2; i++){
+   i2 = i1 + len;
+   for(i = i1; i<i2; i++){
       s = s a[i];
      }
    return s;
 }
 
-function rev_merge(a, i1, i2   ,s, i){
+function rev_merge(a, i1, len   ,s, i){
    # prepending strings like this is really slow ...
    s = "";
-   i = i2;
+   i = i1 + len - 1;
    while(i >= i1) {
       s = a[i--] s;
      }
