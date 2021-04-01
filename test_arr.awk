@@ -128,14 +128,14 @@ function md_record(r, n, lengths, size         , s, refsize){
 function md_header(stats       , s, b, n, lengths, fn){
    s = sprintf("%8s | %20s", "indicies", "element lengths");
    s = s sprintf(" | %8s ", "str size");
-   b = "-----------------------------------------";
+   b = "---------|----------------------|----------";
 
    for(n in stats) {
       for(lengths in stats[n]) {
          PROCINFO["sorted_in"] = "@ind_str_asc";
          for(fn in stats[n][lengths]) {
             s = s sprintf(" | %15s", fn"()");
-            b = b "-------------------";
+            b = b "-|----------------";
            }
          break;
         }
