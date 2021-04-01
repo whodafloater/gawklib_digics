@@ -68,7 +68,7 @@ BEGIN{
 
 function md_results(stats, sortfn, sortparam        , s, n, lengths, key, sorter){
    s = "## sorted by " sortfn " " sortparam "\n";
-   s = md_header(stats);
+   s = s md_header(stats);
 
    # To sort the output table we make a sorting key
    # stats[] is indexed by n, and lengths.
