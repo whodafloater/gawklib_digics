@@ -1,0 +1,38 @@
+
+System Information report written at: 04/01/21 14:02:13
+System Name: GECKO10
+[System Summary]
+
+Item	Value	
+OS Name	Microsoft Windows 10 Pro	
+Version	10.0.19042 Build 19042	
+Other OS Description 	Not Available	
+OS Manufacturer	Microsoft Corporation	
+System Name	GECKO10	
+System Manufacturer	Gigabyte Technology Co., Ltd.	
+System Model	Z68X-UD3H-B3	
+System Type	x64-based PC	
+Installed Physical Memory (RAM)	8.00 GB
+
+
+$ uname -a
+CYGWIN_NT-10.0 gecko10 3.1.7(0.340/5/3) 2020-08-22 17:48 x86_64 Cygwin
+
+gawk version: 5.1.0
+
+## sorted by _reta time
+| indicies |      element lengths | str size  |         _reta() | _reta_classic() |    slow_merge() |
+|---------:|---------------------:|----------:|----------------:|----------------:|----------------:|
+|       10 |              1 2 4 8 |    0.000M |       0.0035 ms |       0.0030 ms |       0.0029 ms |
+|    10000 |              1 1 1 1 |    0.010M |       0.8967 ms |       2.1646 ms |       2.0846 ms |
+|    10000 |           1 8 32 128 |    0.422M |       0.9379 ms |       2.2200 ms |       2.1997 ms |
+|     1000 |    1 1024 4096 16384 |    5.376M |       4.2304 ms |      70.6414 ms |      68.5085 ms |
+|   100000 |              1 1 1 1 |    0.100M |      10.7856 ms |      21.1136 ms |      21.0584 ms |
+|    20000 |       1 256 512 1024 |    8.965M |      15.5494 ms |     163.9340 ms |     165.1549 ms |
+|   100000 |         1 64 128 256 |   11.225M |      26.0427 ms |     399.3032 ms |     426.8701 ms |
+|    50000 |       1 256 512 1024 |   22.412M |      44.9440 ms |    2364.4361 ms |    2392.9281 ms |
+|     5000 |    1 1024 4096 16384 |   26.881M |      51.5165 ms |    3555.6140 ms |    3529.0060 ms |
+|   200000 |         1 64 128 256 |   22.450M |      56.6285 ms |    2464.6389 ms |    2420.8279 ms |
+|  1000000 |              1 1 1 1 |    1.000M |      89.4290 ms |     214.1759 ms |     227.6719 ms |
+|   400000 |         1 64 128 256 |   44.900M |     138.2701 ms |   10405.1602 ms |   10494.7431 ms |
+
