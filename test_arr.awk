@@ -1,3 +1,6 @@
+# Tom Gray
+# 4/1/2021
+#
 # test_arr.awk
 # 
 # gawk -f _arr.mod -f walk_array.awk -f test_arr.awk
@@ -9,7 +12,6 @@
 @load "time"
 
 BEGIN{
-
    # simple example
    delete A;
    split( "ABCDEF", A, "" );
@@ -52,10 +54,13 @@ BEGIN{
 
    test_arr(stats, 200000, "1 64 128 256");
 
+   # this extra key will mess up the array enumerations. kill it.
    delete stats[""];
 
+   # debug
    walk_array(stats, "stats");
 
+   # generate output tables
    s = "_reta() timing results\n";
    s = "gawk version: " PROCINFO["version"] "\n\n";
    # print results using various sorting schemes
@@ -213,6 +218,8 @@ function rev_merge(a, i1, i2   ,s, i){
    return s;
 }
 
+# From Denis. Essentially the same as slow_merge().
+# times the same too so no mystery here.
 func _reta_classic( A, start, len ,q,i,t ) {
 
                 q = start + len
@@ -230,22 +237,14 @@ function thrasher(stats, fn, a1, a2, a3, expect, timewindow, miniters    , iters
    #
    # Make sure fn(a1,a2,a3) == expect
    #
-#   # systime has 1 sec resolution so run for at least 10sec
-#   # to get 10% timing accuracy
+   # systime() has 1 sec resolution. Use gettimeofday() from extension library
    
    iters = 0;
    elapsed = 0;
-
-#   # wait for clock to tick
-#   t0 = systime();
-#   while(systime() == t0);
-#   t0 = systime();
-
    t0 = gettimeofday();
 
    while(elapsed < timewindow*1 || iters < miniters*1) {
       result = @fn(a1,a2,a3);
-      #elapsed = systime() - t0;
       elapsed =  gettimeofday() - t0;
       iters ++;
    }
