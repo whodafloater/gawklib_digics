@@ -67,6 +67,7 @@ BEGIN{
 }
 
 function md_results(stats, sortfn, sortparam        , s, n, lengths, key, sorter){
+   s = "## sorted by " sortfn " " sortparam "\n";
    s = md_header(stats);
 
    # To sort the output table we make a sorting key
@@ -110,7 +111,7 @@ function md_record(r, n, lengths, size         , s, refsize){
    # grab the size from any record and make sure they are all they same.
    for(fn in r) {refsize = r[fn]["size"]; break;}
 
-   s = s sprintf(" | %8.3fM", refsize/1e6);
+   s = s sprintf(" | %8.3fM ", refsize/1e6);
 
    # time for each function 
    PROCINFO["sorted_in"] = "@ind_str_asc";
@@ -118,32 +119,32 @@ function md_record(r, n, lengths, size         , s, refsize){
        t = r[fn]["time"];
        err = "";
        if(r[fn]["size"] != refsize) err="*";
-       s = s sprintf(" | %1s %9.4f ms ", err, r[fn]["time"]*1e3);
+       s = s sprintf("| %1s %10.4f ms ", err, r[fn]["time"]*1e3);
       }
 
-   s = s " |\n";
+   s = s "|\n";
    return s;
 }
 
 function md_header(stats       , s, b, n, lengths, fn){
    s = sprintf("| %8s | %20s", "indicies", "element lengths");
-   s = s sprintf(" | %8s ", "str size");
-   b = "|----------|----------------------|----------";
+   s = s sprintf(" | %8s  ", "str size");
+   b = "|---------:|---------------------:|----------:";
 
    for(n in stats) {
       for(lengths in stats[n]) {
          PROCINFO["sorted_in"] = "@ind_str_asc";
          for(fn in stats[n][lengths]) {
-            s = s sprintf(" | %15s", fn"()");
-            b = b "-|----------------";
+            s = s sprintf("| %15s ", fn"()");
+            b = b "|----------------:";
            }
          break;
         }
       break;
      }
 
-   s = s " |\n";
-   s = s b "-|\n";
+   s = s "|\n";
+   s = s b "|\n";
    return s;
 }
 
